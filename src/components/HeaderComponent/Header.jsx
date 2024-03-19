@@ -1,24 +1,43 @@
-import logo from "../../assets/logo.svg";
+import styled from "styled-components";
+import headImg from "../../assets/head-02.png";
 import Button from "../ButtonComponent/Button";
-import NavLink from "../NavLinkComponent/NavLink";
 import Container from "../ContainerComponent/Container";
-import { navData } from "../../utils/data";
+import Background from "../../layout/BackgroundLayout";
+import NavBar from "../NavBarComponent/NavBar";
+
+const Text = styled.h1`
+  font-size: 34px;
+  color: #fff;
+`;
+
+const Image = styled.img`
+  position: absolute;
+  right: 280px;
+  top: 170px;
+`;
 
 export default function Header() {
   return (
     <>
-      <Container $justify="space-between" $padding="20px 150px">
-        <img src={logo} alt="Mind the Graph" />
+      <Background>
+        <NavBar />
         <Container>
-          {navData.map((item) => (
-            <NavLink href={item.href} key={item.id}>
-              {item.title}
-            </NavLink>
-          ))}
-          <Button outlined="true">Login</Button>
-          <Button>Sign up free</Button>
+          <Container
+            direction="column"
+            $alignitems="start"
+            $padding="50px 110px"
+            $margin="0px 100px"
+            width="350px"
+          >
+            <Text>
+              Discover all possibilities of using this powerfull tool and create
+              science figures, posters and infographics.
+            </Text>
+            <Button>Start creating now</Button>
+          </Container>
+          <Image src={headImg} alt="Head Image" />
         </Container>
-      </Container>
+      </Background>
     </>
   );
 }

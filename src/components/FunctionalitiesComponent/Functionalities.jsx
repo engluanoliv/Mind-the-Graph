@@ -23,26 +23,28 @@ const OfferDescription = styled.p`
 export default function Functionalities({ title, description }) {
   return (
     <>
-      <Container
-        direction="column"
-        $bgcolor="#5f29cc"
-        $margin="100px 400px"
-        $padding="70px 100px 40px 100px"
-        $borderradius="24px"
-      >
-        <OfferTitle>{title}</OfferTitle>
-        <OfferDescription>{description}</OfferDescription>
-        <Container $flexwrap="wrap" $justify="center">
-          {functionalities.map((functionality) => (
-            <Card
-              key={functionality.id}
-              title={functionality.title}
-              description={functionality.description}
-              img={functionality.img}
-            />
-          ))}
+      <Container $margin="0px 100px" $justify="center">
+        <Container
+          direction="column"
+          $bgcolor="#5f29cc"
+          $padding="70px 100px 40px 100px"
+          $borderradius="24px"
+          $maxwidth="900px"
+        >
+          <OfferTitle>{title}</OfferTitle>
+          <OfferDescription>{description}</OfferDescription>
+          <Container $flexwrap="wrap" $justify="center">
+            {functionalities.map((functionality) => (
+              <Card
+                key={functionality.id}
+                title={functionality.title}
+                description={functionality.description}
+                img={functionality.img}
+              />
+            ))}
+          </Container>
+          <Button outlined="true">EXPLORE MIND THE GRAPH</Button>
         </Container>
-        <Button outlined="true">EXPLORE MIND THE GRAPH</Button>
       </Container>
     </>
   );

@@ -15,6 +15,7 @@ const StyledContainer = styled.div`
   flex-wrap: ${(props) => (props.$flexwrap ? props.$flexwrap : "")};
   width: ${(props) => (props.width ? props.width : "")};
   background: ${(props) => (props.$background ? background : "")};
+  max-width: ${(props) => (props.$maxwidth ? props.$maxwidth : "")};
 `;
 
 export default function Container({ children, gradient, ...props }) {
