@@ -7,7 +7,7 @@ const CardContainer = styled.div`
   max-height: 440px;
   max-width: 300px;
   text-align: center;
-  margin: ${(props) => (props.$isservice ? "0px 40px" : "30px 0px")};
+  margin: ${(props) => (props.$isservice ? "40px" : "30px 0px")};
 `;
 
 const CardTitle = styled.p`
@@ -36,7 +36,7 @@ export default function Card({ img, title, description, isservice }) {
         <CardDescription $isservice={isservice}>{description}</CardDescription>
         {isservice && (
           <a href="#" style={{ fontWeight: "bold" }}>
-            &gt; LEARN MORE{" "}
+            &gt; LEARN MORE
           </a>
         )}
       </CardContainer>

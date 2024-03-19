@@ -9,6 +9,7 @@ const ServiceContainerTitle = styled.h1`
   margin-bottom: 90px;
   font-family: Lato;
   text-align: center;
+  padding: 0px 60px;
 `;
 
 export default function Services() {

@@ -14,7 +14,7 @@ const NavListContainer = styled.div`
     width: 100%;
     text-align: center;
     transition: 0.3s;
-    background: transparent linear-gradient(248deg, #dc1866 0%, #ff9226 120%) 0%
+    background: transparent linear-gradient(248deg, #dc1866 0%, #ff9226 100%) 0%
       0% no-repeat padding-box;
   }
 `;
