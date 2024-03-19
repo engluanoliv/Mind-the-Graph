@@ -7,34 +7,34 @@ const CardContainer = styled.div`
   max-height: 440px;
   max-width: 300px;
   text-align: center;
-  margin: ${(props) => (props.isService ? "0px 40px" : "30px 0px")};
+  margin: ${(props) => (props.$isservice ? "0px 40px" : "30px 0px")};
 `;
 
 const CardTitle = styled.p`
-  color: ${(props) => (props.isService ? "#7833ff" : "#fff")};
+  color: ${(props) => (props.$isservice ? "#7833ff" : "#fff")};
   font-weight: bold;
   font-size: 20px;
   padding: 0px 25px;
   font-family: Lato;
-  margin: ${(props) => (props.isService ? "" : "10px")};
+  margin: ${(props) => (props.$isservice ? "" : "10px")};
 `;
 const CardDescription = styled.p`
   font-weight: normal;
   font-size: 20px;
-  color: ${(props) => (props.isService ? "#212121" : "#fff")};
-  padding: ${(props) => (props.isService ? "0px 10px" : "0px")};
-  margin: ${(props) => (props.isService ? "" : "10px")};
+  color: ${(props) => (props.$isservice ? "#212121" : "#fff")};
+  padding: ${(props) => (props.$isservice ? "0px 10px" : "0px")};
+  margin: ${(props) => (props.$isservice ? "" : "10px")};
   font-family: Lato;
 `;
 
-export default function Card({ img, title, description, isService }) {
+export default function Card({ img, title, description, isservice }) {
   return (
     <>
-      <CardContainer isService={isService}>
+      <CardContainer $isservice={isservice}>
         <img src={img} alt="..." />
-        <CardTitle isService={isService}>{title}</CardTitle>
-        <CardDescription isService={isService}>{description}</CardDescription>
-        {isService && <a href="#">&gt; LEARN MORE </a>}
+        <CardTitle $isservice={isservice}>{title}</CardTitle>
+        <CardDescription $isservice={isservice}>{description}</CardDescription>
+        {isservice && <a href="#">&gt; LEARN MORE </a>}
       </CardContainer>
     </>
   );

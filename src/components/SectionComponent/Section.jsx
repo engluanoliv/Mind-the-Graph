@@ -20,9 +20,9 @@ export default function Section() {
       <Container>
         <Container
           direction="column"
-          alignItems="start"
-          padding="50px 110px"
-          margin="0px 100px"
+          $alignitems="start"
+          $padding="50px 110px"
+          $margin="0px 100px"
           width="350px"
         >
           <Text>

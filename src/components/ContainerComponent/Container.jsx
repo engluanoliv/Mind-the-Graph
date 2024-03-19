@@ -6,21 +6,21 @@ const background =
 const StyledContainer = styled.div`
   display: flex;
   flex-direction: ${(props) => (props.direction ? props.direction : "")};
-  align-items: ${(props) => (props.alignItems ? props.alignItems : "center")};
-  justify-content: ${(props) => (props.justify ? props.justify : "")};
-  padding: ${(props) => (props.padding ? props.padding : "")};
-  margin: ${(props) => (props.margin ? props.margin : "")};
-  background-color: ${(props) => (props.bgColor ? props.bgColor : "")};
-  border-radius: ${(props) => (props.borderRadius ? props.borderRadius : "")};
-  flex-wrap: ${(props) => (props.flexWrap ? props.flexWrap : "")};
+  align-items: ${(props) => (props.$alignitems ? props.$alignitems : "center")};
+  justify-content: ${(props) => (props.$justify ? props.$justify : "")};
+  padding: ${(props) => (props.$padding ? props.$padding : "")};
+  margin: ${(props) => (props.$margin ? props.$margin : "")};
+  background-color: ${(props) => (props.$bgcolor ? props.$bgcolor : "")};
+  border-radius: ${(props) => (props.$borderradius ? props.$borderradius : "")};
+  flex-wrap: ${(props) => (props.$flexwrap ? props.$flexwrap : "")};
   width: ${(props) => (props.width ? props.width : "")};
-  background: ${(props) => (props.background ? background : "")};
+  background: ${(props) => (props.$background ? background : "")};
 `;
 
 export default function Container({ children, gradient, ...props }) {
   return (
     <>
-      <StyledContainer background={gradient} {...props}>
+      <StyledContainer $background={gradient} {...props}>
         {children}
       </StyledContainer>
     </>

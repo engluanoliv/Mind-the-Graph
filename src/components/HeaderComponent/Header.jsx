@@ -7,7 +7,7 @@ import { navData } from "../../utils/data";
 export default function Header() {
   return (
     <>
-      <Container justify="space-between" padding="20px 150px">
+      <Container $justify="space-between" $padding="20px 150px">
         <img src={logo} alt="Mind the Graph" />
         <Container>
           {navData.map((item) => (
@@ -15,7 +15,7 @@ export default function Header() {
               {item.title}
             </NavLink>
           ))}
-          <Button outlined>Login</Button>
+          <Button outlined="true">Login</Button>
           <Button>Sign up free</Button>
         </Container>
       </Container>
