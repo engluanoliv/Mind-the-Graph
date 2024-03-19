@@ -8,16 +8,17 @@ const ServiceContainerTitle = styled.h1`
   font-size: 34px;
   margin-bottom: 90px;
   font-family: Lato;
+  text-align: center;
 `;
 
 export default function Services() {
   return (
     <>
-      <Container $margin="100px 0px" direction="column">
+      <Container $margin="100px 0px" direction="column" $flexwrap="wrap">
         <ServiceContainerTitle>
           Visualize what Mind the Graph can do for you
         </ServiceContainerTitle>
-        <Container>
+        <Container $flexwrap="wrap" $justify="center">
           {mindServices.map((service) => (
             <Card
               isservice="true"

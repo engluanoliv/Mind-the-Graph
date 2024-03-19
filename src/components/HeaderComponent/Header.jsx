@@ -12,8 +12,13 @@ const Text = styled.h1`
 
 const Image = styled.img`
   position: absolute;
-  right: 280px;
-  top: 170px;
+  right: 180px;
+  top: 180px;
+  @media only screen and (max-width: 1300px) {
+    position: relative;
+    right: 0px;
+    top: 30px;
+  }
 `;
 
 export default function Header() {
@@ -21,12 +26,11 @@ export default function Header() {
     <>
       <Background>
         <NavBar />
-        <Container>
+        <Container device="laptopL">
           <Container
             direction="column"
             $alignitems="start"
             $padding="50px 110px"
-            $margin="0px 100px"
             width="350px"
           >
             <Text>

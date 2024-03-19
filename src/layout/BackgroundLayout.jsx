@@ -5,10 +5,10 @@ const StyledContainer = styled.div`
     0% no-repeat padding-box;
 `;
 
-export default function Background({ children }) {
+export default function Background({ children, device }) {
   return (
     <>
-      <StyledContainer>{children}</StyledContainer>
+      <StyledContainer $device={device}>{children}</StyledContainer>
     </>
   );
 }

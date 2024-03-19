@@ -4,14 +4,14 @@ import Card from "../CardComponent/Card";
 import Container from "../ContainerComponent/Container";
 import Button from "../ButtonComponent/Button";
 
-const OfferTitle = styled.h1`
+const Title = styled.h1`
   font-size: 34px;
   font-weight: bold;
   color: #fff;
   font-family: Lato;
 `;
 
-const OfferDescription = styled.p`
+const Description = styled.p`
   font-size: 20px;
   color: #fff;
   font-weight: normal;
@@ -23,16 +23,17 @@ const OfferDescription = styled.p`
 export default function Functionalities({ title, description }) {
   return (
     <>
-      <Container $margin="0px 100px" $justify="center">
+      <Container $justify="center" $margin="0px 40px">
         <Container
           direction="column"
+          $textalign="center"
           $bgcolor="#5f29cc"
           $padding="70px 100px 40px 100px"
           $borderradius="24px"
           $maxwidth="900px"
         >
-          <OfferTitle>{title}</OfferTitle>
-          <OfferDescription>{description}</OfferDescription>
+          <Title>{title}</Title>
+          <Description>{description}</Description>
           <Container $flexwrap="wrap" $justify="center">
             {functionalities.map((functionality) => (
               <Card

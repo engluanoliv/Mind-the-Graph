@@ -53,7 +53,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #EEEEEE;
+    background-color: #eeeeee;
   }
   a:hover {
     color: #747bff;
@@ -62,3 +62,18 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* @media only screen and (max-width: 768px) { */
+/* .navbar-menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  } */
+/* } */
