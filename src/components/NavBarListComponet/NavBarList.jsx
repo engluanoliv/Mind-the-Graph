@@ -2,16 +2,16 @@ import { navData } from "../../utils/data";
 import NavLink from "../NavLinkComponent/NavLink";
 import Button from "../ButtonComponent/Button";
 import styled from "styled-components";
-import { device } from "../../utils/responsiveSettings";
 
 const NavListContainer = styled.div`
-  @media only screen and (${(props) => device[props.$device]}) {
-    display: flex;
-    position: absolute;
-    top: 80px;
-    left: ${(props) => (props.$open ? "0px" : "-100%")};
+  @media only screen and (max-width: 864px) {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
     flex-direction: column;
+    background-color: #fff;
     width: 100%;
+    border-radius: 10px;
     text-align: center;
     transition: 0.3s;
     background: transparent linear-gradient(248deg, #dc1866 0%, #ff9226 100%) 0%
@@ -19,10 +19,10 @@ const NavListContainer = styled.div`
   }
 `;
 
-export default function NavBarList({ isOpen }) {
+export default function NavBarList() {
   return (
     <>
-      <NavListContainer $device="tablet" $open={isOpen}>
+      <NavListContainer>
         {navData.map((item) => (
           <NavLink href={item.href} key={item.id}>
             {item.title}

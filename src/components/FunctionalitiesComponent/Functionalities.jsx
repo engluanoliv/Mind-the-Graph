@@ -28,7 +28,7 @@ export default function Functionalities({ title, description }) {
           direction="column"
           $textalign="center"
           $bgcolor="#5f29cc"
-          $padding="50px"
+          $padding="70px 100px 40px 100px"
           $borderradius="24px"
           $maxwidth="900px"
         >
