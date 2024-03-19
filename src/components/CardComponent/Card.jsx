@@ -34,7 +34,11 @@ export default function Card({ img, title, description, isservice }) {
         <img src={img} alt="..." />
         <CardTitle $isservice={isservice}>{title}</CardTitle>
         <CardDescription $isservice={isservice}>{description}</CardDescription>
-        {isservice && <a href="#">&gt; LEARN MORE </a>}
+        {isservice && (
+          <a href="#" style={{ fontWeight: "bold" }}>
+            &gt; LEARN MORE{" "}
+          </a>
+        )}
       </CardContainer>
     </>
   );
