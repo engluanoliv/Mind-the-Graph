@@ -29,7 +29,12 @@ export default function Header() {
       <Background>
         <NavBar />
         <Container $device="tablet" $padding="50px 100px">
-          <Container direction="column" width="350px">
+          <Container
+            $device="laptop"
+            direction="column"
+            width="350px"
+            $alignitems="start"
+          >
             <Text>
               Discover all possibilities of using this powerfull tool and create
               science figures, posters and infographics.

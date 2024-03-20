@@ -23,6 +23,12 @@ const StyledContainer = styled.div`
   @media (${(props) => (props.$device ? device[props.$device] : "")}) {
     flex-direction: column;
   }
+
+  @media (${(props) => (props.$device ? device[props.$device] : "")}) {
+    text-align: center;
+    width: auto;
+    align-items: center;
+  }
 `;
 
 export default function Container({ children, device, gradient, ...props }) {
