@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const CardContainer = styled.div`
+export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,7 @@ const CardContainer = styled.div`
   margin: ${(props) => (props.$isservice ? "40px" : "30px 0px")};
 `;
 
-const CardTitle = styled.p`
+export const CardTitle = styled.p`
   color: ${(props) => (props.$isservice ? "#7833ff" : "#fff")};
   font-weight: bold;
   font-size: 20px;
@@ -18,7 +18,7 @@ const CardTitle = styled.p`
   font-family: Lato;
   margin: ${(props) => (props.$isservice ? "" : "10px")};
 `;
-const CardDescription = styled.p`
+export const CardDescription = styled.p`
   font-weight: normal;
   font-size: 20px;
   color: ${(props) => (props.$isservice ? "#212121" : "#fff")};
@@ -26,20 +26,3 @@ const CardDescription = styled.p`
   margin: ${(props) => (props.$isservice ? "" : "10px")};
   font-family: Lato;
 `;
-
-export default function Card({ img, title, description, isservice }) {
-  return (
-    <>
-      <CardContainer $isservice={isservice}>
-        <img src={img} alt="..." />
-        <CardTitle $isservice={isservice}>{title}</CardTitle>
-        <CardDescription $isservice={isservice}>{description}</CardDescription>
-        {isservice && (
-          <a href="#" style={{ fontWeight: "bold" }}>
-            &gt; LEARN MORE
-          </a>
-        )}
-      </CardContainer>
-    </>
-  );
-}

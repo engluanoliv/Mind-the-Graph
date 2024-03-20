@@ -1,24 +1,20 @@
-import styled from "styled-components";
 import { mindServices } from "../../utils/data";
-import Card from "../CardComponent/Card";
-import Container from "../ContainerComponent/Container";
-
-const ServiceContainerTitle = styled.h1`
-  color: #7833ff;
-  font-size: 34px;
-  margin-bottom: 90px;
-  font-family: Lato;
-  text-align: center;
-  padding: 0px 60px;
-`;
+import Card from "../Card";
+import Container from "../Container";
+import Title from "../Title";
 
 export default function Services() {
   return (
     <>
       <Container $margin="100px 0px" direction="column" $flexwrap="wrap">
-        <ServiceContainerTitle>
+        <Title
+          color="#7833ff"
+          margin="0 0 90px 0"
+          padding="0px 60px"
+          textalign="center"
+        >
           Visualize what Mind the Graph can do for you
-        </ServiceContainerTitle>
+        </Title>
         <Container $flexwrap="wrap" $justify="center">
           {mindServices.map((service) => (
             <Card

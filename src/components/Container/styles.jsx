@@ -4,7 +4,7 @@ import { device } from "../../utils/responsiveSettings";
 const background =
   "transparent linear-gradient(248deg, #dc1866 0%, #ff9226 100%) 0% 0% no-repeat padding-box";
 
-const StyledContainer = styled.div`
+export const StyledContainer = styled.div`
   display: flex;
   flex-direction: ${(props) => (props.direction ? props.direction : "")};
   align-items: ${(props) => (props.$alignitems ? props.$alignitems : "center")};
@@ -30,13 +30,3 @@ const StyledContainer = styled.div`
     align-items: center;
   }
 `;
-
-export default function Container({ children, device, gradient, ...props }) {
-  return (
-    <>
-      <StyledContainer $device={device} $background={gradient} {...props}>
-        {children}
-      </StyledContainer>
-    </>
-  );
-}

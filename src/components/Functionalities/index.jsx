@@ -1,24 +1,9 @@
-import styled from "styled-components";
 import { functionalities } from "../../utils/data";
-import Card from "../CardComponent/Card";
-import Container from "../ContainerComponent/Container";
-import Button from "../ButtonComponent/Button";
-
-const Title = styled.h1`
-  font-size: 34px;
-  font-weight: bold;
-  color: #fff;
-  font-family: Lato;
-`;
-
-const Description = styled.p`
-  font-size: 20px;
-  color: #fff;
-  font-weight: normal;
-  font-family: Lato;
-  text-align: center;
-  padding: 50px 60px;
-`;
+import { Description } from "./styles";
+import Title from "../Title";
+import Card from "../Card";
+import Container from "../Container";
+import Button from "../Button";
 
 export default function Functionalities({ title, description }) {
   return (
@@ -32,7 +17,9 @@ export default function Functionalities({ title, description }) {
           $borderradius="24px"
           $maxwidth="900px"
         >
-          <Title>{title}</Title>
+          <Title color="#fff" textalign="center">
+            {title}
+          </Title>
           <Description>{description}</Description>
           <Container $flexwrap="wrap" $justify="center">
             {functionalities.map((functionality) => (

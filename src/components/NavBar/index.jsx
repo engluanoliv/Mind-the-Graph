@@ -1,8 +1,8 @@
 import { useState } from "react";
 import logo from "../../assets/logo.svg";
-import Container from "../ContainerComponent/Container";
-import HamburguerNav from "../HamburguerNavComponent/HamburguerNav";
-import NavBarList from "../NavBarListComponet/NavBarList";
+import Container from "../Container";
+import HamburguerNav from "../HamburguerNav";
+import NavBarList from "../NavBarList";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);

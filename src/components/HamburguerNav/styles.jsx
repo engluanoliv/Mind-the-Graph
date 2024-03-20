@@ -1,8 +1,7 @@
-import { useState } from "react";
 import styled from "styled-components";
 import { device } from "../../utils/responsiveSettings";
 
-const Icon = styled.div`
+export const Icon = styled.div`
   display: none;
   @media only screen and (${(props) => device[props.$device]}) {
     display: block;
@@ -10,7 +9,7 @@ const Icon = styled.div`
   }
 `;
 
-const BarIcon = styled.div`
+export const BarIcon = styled.div`
   display: block;
   width: 25px;
   height: 3px;
@@ -31,21 +30,3 @@ const BarIcon = styled.div`
       open ? "rotate(-45deg) translateY(-11px)" : "rotate(0)"};
   }
 `;
-
-export default function HamburguerNav({ onOpen, ...props }) {
-  const [open, setOpen] = useState(false);
-
-  function handleClick() {
-    const newOpen = !open;
-    setOpen(newOpen);
-    onOpen(newOpen);
-  }
-
-  return (
-    <Icon $device="tablet" open={open} onClick={handleClick} {...props}>
-      <BarIcon open={open}></BarIcon>
-      <BarIcon open={open}></BarIcon>
-      <BarIcon open={open}></BarIcon>
-    </Icon>
-  );
-}

@@ -1,6 +1,6 @@
-import Header from "./components/HeaderComponent/Header";
-import Services from "./components/ServicesComponent/Services";
-import Functionalities from "./components/FunctionalitiesComponent/Functionalities";
+import Header from "./components/Header";
+import Services from "./components/Services";
+import Functionalities from "./components/Functionalities";
 import { offerInformations } from "./utils/data";
 
 function App() {
