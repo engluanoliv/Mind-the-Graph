@@ -3,7 +3,8 @@ import Button from "../Button";
 import Container from "../Container";
 import Background from "../../layout/BackgroundLayout";
 import NavBar from "../NavBar";
-import { Text, Image } from "./styles";
+import Text from "../Text";
+import { Image } from "./styles";
 
 export default function Header() {
   return (
@@ -14,10 +15,10 @@ export default function Header() {
           <Container
             $device="laptop"
             direction="column"
-            width="350px"
+            width="340px"
             $alignitems="start"
           >
-            <Text>
+            <Text color="#fff" $fontweight="900">
               Discover all possibilities of using this powerfull tool and create
               science figures, posters and infographics.
             </Text>

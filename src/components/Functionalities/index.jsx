@@ -1,6 +1,6 @@
 import { functionalities } from "../../utils/data";
 import { Description } from "./styles";
-import Title from "../Title";
+import Text from "../Text";
 import Card from "../Card";
 import Container from "../Container";
 import Button from "../Button";
@@ -17,9 +17,9 @@ export default function Functionalities({ title, description }) {
           $borderradius="24px"
           $maxwidth="900px"
         >
-          <Title color="#fff" textalign="center">
+          <Text color="#fff" $textalign="center" $fontweight="bold">
             {title}
-          </Title>
+          </Text>
           <Description>{description}</Description>
           <Container $flexwrap="wrap" $justify="center">
             {functionalities.map((functionality) => (
