@@ -5,9 +5,8 @@ export default function HamburguerNav({ onOpen, ...props }) {
   const [open, setOpen] = useState(false);
 
   function handleClick() {
-    const newOpen = !open;
-    setOpen(newOpen);
-    onOpen(newOpen);
+    setOpen((prevOpen) => !prevOpen);
+    onOpen();
   }
 
   return (

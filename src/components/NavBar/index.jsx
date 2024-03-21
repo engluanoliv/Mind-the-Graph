@@ -6,12 +6,17 @@ import NavBarList from "../NavBarList";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  function onOpenHandler() {
+    setIsOpen((prevIsOpen) => !prevIsOpen);
+  }
+
   return (
     <>
       <Container $justify="space-between" $padding="20px 50px">
         <img src={logo} alt="Mind the Graph" />
         <NavBarList isOpen={isOpen} />
-        <HamburguerNav onOpen={setIsOpen} />
+        <HamburguerNav onOpen={onOpenHandler} />
       </Container>
     </>
   );
